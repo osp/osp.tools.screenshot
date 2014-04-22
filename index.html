@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    box-sizing: border-box;
+    font-family: Ubuntu;
+    font-size: 15px;
+}
+#header {
+    min-width: 862px;
+    width: 100%;
+    height: 118px;
+    border-width: 59px 292px 59px 569px;
+    border-image: url(header.png) 59 292 59 569 stretch stretch;
+}
+#content {
+    min-width: 862px;
+    width: 100%;
+    min-height: 181px;
+    height: 100%;
+    border-width: 129px 14px 18px 1px;
+    border-image: url(content.png) 129 14 18 1 stretch stretch;
+}
+#footer {
+    min-width: 862px;
+    height: 25px;
+    border-width: 12px 1px 13px 25px;
+    border-image: url(footer.png) 12 1 13 25 stretch stretch;
+}
+#windowtitle {
+    position: absolute;
+    top: 7px;
+    left: 76px;
+    //font-weight: bold;
+    color: #fffdf2;
+    font-size: 12px;
+}
+#address {
+    position: absolute;
+    top: 90px;
+    left: 69px;
+    color: #ccc;
+}
+#address span {
+    color: #000;
+}
+#tabtitle {
+    color: #3c3b37;
+    position: absolute;
+    top: 59px;
+    left: 25px;
+    width: 222px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#screenshot {
+    position: absolute;
+    top: 118px;
+    left: 1px;
+}
+</style>
+<div id="header" class="ui"></div>
+
+<div id="content" class="ui"></div>
+
+<div id="footer" class="ui"></div>
+
+<div id="windowtitle">Write me a shadow. OSP @ ESAD Valence - Mozilla Firefox</div>
+
+<div id="address">http://ospublish.<span>constantvzw.org</span>/workshop/write-me-a-shadow/</div>
+
+<div id="tabtitle">Write me a shadow. OSP @ ESAD Valence</div>
+
+<div id="screenshot"><img id="source-screenshot" src="test_osp_home.png"></div>
+
+<script>
+// http://stackoverflow.com/questions/16342936/how-do-i-get-natural-dimensions-of-an-image-using-javascript-or-jquery
+var img     = document.getElementById('source-screenshot');
+var new_img = new Image();
+
+new_img.onload = function() {
+    var width  = this.width;
+    var height = this.height;
+
+    var uiElements = document.getElementsByClassName("ui");
+    for (var i = 0; i < uiElements.length; i++) {
+        uiElements[i].style.width = width + 1 + 14 + 'px';
+    }
+    document.getElementById("content").style.height = height + 'px';
+}
+
+new_img.src = img.src;
+</script>
