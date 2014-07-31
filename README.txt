@@ -19,6 +19,12 @@ For a 1000 wide by 2000 high screenshot of the tool’s homepage.
 In the future it should also be possible to make a PDF version, as the
 underlying phantomjs software is already able to do so.
 
+Known bugs
+----------
+
+The current version of PhantomJS (1.9) has problems with rendering webfonts.
+The new version 2.0 based on a new version of Webkit will probably solve these.
+
 Acknowledgments
 ---------------
 
