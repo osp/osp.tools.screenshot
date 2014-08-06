@@ -1,6 +1,8 @@
 OSP Screenshot Tool
 ===================
 
+<p><a href="http://osp.kitchen/tools/screenshot/"><img src="http://osp.kitchen/api/osp.tools.screenshot/raw/iceberg/screenshot-screenshot.png" style="width:600px;"></a></p>
+
 This little tool is used to make screenshots of web pages from the command line.
 Its specificity, is that it adds a browser window around the screenshot in the
 right proportions, showing the site’s title and address just like in a
@@ -12,9 +14,9 @@ larger sized or portrait oriented screenshot.
 
 Usage:
 
-phantomjs shot.js http://osp.kitchen/tools/screenshot/ screenshot_test.png 1000px*2000px
+phantomjs shot.js http://osp.kitchen/tools/screenshot/ screenshot_test.png 1200px*1200px
 
-For a 1000 wide by 2000 high screenshot of the tool’s homepage.
+For a 1200 wide by 1200 high screenshot of the tool’s homepage (as pictured).
 
 In the future it should also be possible to make a PDF version, as the
 underlying phantomjs software is already able to do so.
